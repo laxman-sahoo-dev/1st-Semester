@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int Count_vowel(char str[]){
+    int i,count=0;
+     for(i=strlen(str)-1;i>=0;i--){
+         char ch=tolower(str[i]);
+            if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+
+int main()
+{
+    char str[10098];
+    printf("Enter a string:");
+    fgets(str,sizeof(str),stdin);
+    if(str[strlen(str)-1]=='\n')
+        str[strlen(str)-1]='\0';
+    printf("%s\n",str);
+    Count_vowel(str);
+    printf("The number of vowel=%d",Count_vowel(str));
+}
