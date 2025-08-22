@@ -6,7 +6,7 @@ bool isAmstrong(int num){
     int i,dg,dg_count = 0,temp,f,sum = 0;
      temp = num;
      
-     //digit count
+     //digit cou
      while(num != 0){
          num /=10;
          dg_count++;
